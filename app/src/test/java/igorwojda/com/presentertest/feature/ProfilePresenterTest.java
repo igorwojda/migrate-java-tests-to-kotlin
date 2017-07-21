@@ -7,7 +7,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
@@ -22,7 +21,6 @@ public class ProfilePresenterTest {
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
         profilePresenter = new ProfilePresenter(mockEventBus);
     }
 
@@ -36,7 +34,7 @@ public class ProfilePresenterTest {
     }
 
     @Test
-    public void when_drop_view_then_unregister_event_bus() {
+    public void given_take_view_when_drop_view_then_unregister_event_bus() {
         // given
         profilePresenter.onTakeView(mockView);
 
@@ -47,15 +45,15 @@ public class ProfilePresenterTest {
         verify(mockEventBus).unregister(profilePresenter);
     }
 
-//    @Test
-//    public void should_load_activity_tab_config_after_call_on_retry() {
-//        //given
-//        notificationsPresenter.takeView(mockNotificationsView);
-//
-//        //when
-//        notificationsPresenter.onRetryButtonClicked();
-//
-//        //then
-//        verify(mockEventBus).post(any(LoadHomeActivityContentEvent.class));
-//    }
+    @Test
+    public void given_take_view_when_load_users_then_show_loading() {
+        //given
+        profilePresenter.onTakeView(mockView);
+
+        //when
+        profilePresenter.onLoadUserData();
+
+        //then
+        verify(mockView).showLoading();
+    }
 }
