@@ -1,4 +1,4 @@
-package com.babylon.v2.home.presenter
+package igorwojda.com.presentertest.feature
 
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
@@ -9,10 +9,8 @@ import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.given
 import org.jetbrains.spek.api.dsl.it
 import org.jetbrains.spek.api.dsl.on
-import org.junit.platform.runner.JUnitPlatform
-import org.junit.runner.RunWith
 
-@RunWith(JUnitPlatform::class)
+//@RunWith(JUnitPlatform::class)
 class ProfilePresenterTest_Sample1_Kotlin_Spek : Spek({
 
     val mockView by memoized { mock<ProfileView>() }

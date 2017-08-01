@@ -1,4 +1,4 @@
-package com.babylon.v2.home.presenter
+package igorwojda.com.presentertest.feature
 
 import com.nhaarman.mockito_kotlin.verify
 import igorwojda.com.presentertest.feature.profile.ProfilePresenter

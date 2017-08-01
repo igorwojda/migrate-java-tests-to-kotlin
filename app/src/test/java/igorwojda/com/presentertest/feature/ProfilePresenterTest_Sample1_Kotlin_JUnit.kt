@@ -1,6 +1,6 @@
 @file:Suppress("IllegalIdentifier")
 
-package com.babylon.v2.home.presenter
+package igorwojda.com.presentertest.feature
 
 import com.nhaarman.mockito_kotlin.then
 import com.nhaarman.mockito_kotlin.verify
