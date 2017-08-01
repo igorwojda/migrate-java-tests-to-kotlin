@@ -1,4 +1,14 @@
-apply plugin: 'java'
+apply plugin: "kotlin"
+
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+junitPlatform {
+    filters {
+        engines {
+            include 'spek'
+        }
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -15,6 +25,8 @@ dependencies {
     testCompile "org.jetbrains.spek:spek-junit-platform-engine:1.1.2"
     testCompile "io.kotlintest:kotlintest:2.0.4"
     testCompile "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
+
+    testRuntime "org.junit.platform:junit-platform-launcher:1.0.0-M4"
 }
 
 sourceCompatibility = "1.7"
