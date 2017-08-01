@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 25
@@ -29,5 +30,15 @@ dependencies {
 
     compile 'org.greenrobot:eventbus:3.0.0'
     testCompile 'junit:junit:4.12'
+    testCompile "org.junit.platform:junit-platform-runner:1.0.0-M4"
     testCompile 'org.mockito:mockito-core:2.8.47'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    testCompile "org.jetbrains.spek:spek-api:1.1.2"
+    testCompile "org.jetbrains.spek:spek-junit-platform-engine:1.1.2"
+    testCompile "io.kotlintest:kotlintest:2.0.4"
+    testCompile "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
+}
+repositories {
+    mavenCentral()
 }

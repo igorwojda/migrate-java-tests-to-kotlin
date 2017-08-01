@@ -10,11 +10,11 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
+import static com.nhaarman.mockito_kotlin.BDDMockitoKt.then;
 import static org.mockito.Mockito.verify;
 
-public class ProfilePresenterTest {
+public class ProfilePresenterTest_Sample1_Java_JUnit {
     private ProfilePresenter profilePresenter;
-
     @Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
     @Mock EventBus mockEventBus;
     @Mock ProfileView mockView;
@@ -25,35 +25,20 @@ public class ProfilePresenterTest {
     }
 
     @Test
-    public void when_take_view_then_register_event_bus() {
-        // when
-        profilePresenter.onTakeView(mockView);
+    public void when_take_view_register_event_bus() {
+        // given
+        profilePresenter.takeView(mockView);
 
         // then
-        verify(mockEventBus).register(profilePresenter);
+        then(mockEventBus).should().register(profilePresenter);
     }
 
     @Test
-    public void given_take_view_when_drop_view_then_unregister_event_bus() {
+    public void when_take_view_unregister_event_bus() {
         // given
-        profilePresenter.onTakeView(mockView);
-
-        // when
-        profilePresenter.onDropView();
+        profilePresenter.dropView();
 
         // then
         verify(mockEventBus).unregister(profilePresenter);
-    }
-
-    @Test
-    public void given_take_view_when_load_users_then_show_loading() {
-        //given
-        profilePresenter.onTakeView(mockView);
-
-        //when
-        profilePresenter.onLoadUserData();
-
-        //then
-        verify(mockView).showLoading();
     }
 }

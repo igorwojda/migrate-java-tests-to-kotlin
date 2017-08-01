@@ -11,13 +11,13 @@ public class ProfilePresenter<VIEW extends ProfileView> {
         this.eventBus = eventBus;
     }
 
-    public void onTakeView(VIEW view) {
+    public void takeView(VIEW view) {
         this.view = view;
 
         eventBus.register(this);
     }
 
-    public void onDropView() {
+    public void dropView() {
         eventBus.unregister(this);
     }
 
