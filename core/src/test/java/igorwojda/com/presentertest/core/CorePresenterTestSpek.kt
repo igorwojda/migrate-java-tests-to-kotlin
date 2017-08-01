@@ -12,7 +12,7 @@ import org.jetbrains.spek.api.dsl.on
 
 
 //@RunWith(JUnitPlatform::class)
-class ProfilePresenterTestSpek : Spek({
+class CorePresenterTestSpek : Spek({
 
     val mockView by memoized { mock<CoreView>() }
     val mockEventBus by memoized { mock<EventBus>() }
