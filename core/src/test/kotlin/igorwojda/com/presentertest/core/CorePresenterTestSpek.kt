@@ -1,4 +1,4 @@
-package igorwojda.com.presentertest.feature
+package igorwojda.com.presentertest.core
 
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
