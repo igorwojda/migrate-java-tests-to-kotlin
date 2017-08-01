@@ -13,7 +13,7 @@ import org.junit.Test
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnit
 
-class ProfilePresenterTest_Sample1_Kotlin_JUnit {
+class ProfilePresenterTest_Kotlin_JUnit {
     @JvmField @Rule var mockitoRule = MockitoJUnit.rule()
     lateinit var profilePresenter: ProfilePresenter<ProfileView>
     @Mock lateinit var mockView: ProfileView

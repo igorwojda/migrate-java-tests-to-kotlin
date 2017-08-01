@@ -13,7 +13,7 @@ import org.mockito.junit.MockitoRule;
 import static com.nhaarman.mockito_kotlin.BDDMockitoKt.then;
 import static org.mockito.Mockito.verify;
 
-public class ProfilePresenterTest_Sample1_Java_JUnit {
+public class ProfilePresenterTest_Java_JUnit {
     private ProfilePresenter profilePresenter;
     @Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
     @Mock EventBus mockEventBus;

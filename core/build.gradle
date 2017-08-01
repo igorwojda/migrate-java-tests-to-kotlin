@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.0.0-M4'
+
+    testCompile "org.junit.platform:junit-platform-runner:1.0.0-M4"
+    testCompile 'org.mockito:mockito-core:2.8.47'
+
+    testCompile "org.jetbrains.spek:spek-api:1.1.2"
+    testCompile "org.jetbrains.spek:spek-junit-platform-engine:1.1.2"
+    testCompile "io.kotlintest:kotlintest:2.0.4"
+    testCompile "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

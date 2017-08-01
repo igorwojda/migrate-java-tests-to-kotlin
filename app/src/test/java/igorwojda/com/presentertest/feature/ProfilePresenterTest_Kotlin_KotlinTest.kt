@@ -9,7 +9,7 @@ import org.greenrobot.eventbus.EventBus
 import org.mockito.Mock
 import org.mockito.MockitoAnnotations
 
-class ProfilePresenterTest_Sample1_Kotlin_KotlinTest : BehaviorSpec() {
+class ProfilePresenterTest_Kotlin_KotlinTest : BehaviorSpec() {
     private lateinit var profilePresenter: ProfilePresenter<ProfileView>
     @Mock lateinit var mockView: ProfileView
     @Mock lateinit var mockEventBus: EventBus
